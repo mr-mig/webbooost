@@ -1,0 +1,38 @@
+{
+  "name": "WebBooost",
+  "version": "1.2.0",
+  "manifest_version": 2,
+  "description": "This extension boosts websites loading speed!",
+  "homepage_url": "http://fse.guru",
+    "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "js/configs/reg_config.js",
+      "js/configs/hash_config.js",
+      "js/checkers/hashChecker.js",
+      "js/checkers/regChecker.js",
+      "js/helpers.js",
+      "js/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "page_action": {
+    "default_icon": {
+      "19": "icons/icon16.png",
+      "38": "icons/icon32.png"
+    },
+    "default_title": "This page was boosted!",
+    "default_popup": "page_action/page_action.html"
+  },
+  "permissions": [
+    "webRequest","webRequestBlocking","<all_urls>"
+  ],
+  "content_scripts": [ ],
+  "web_accessible_resources" : [
+    "injectees/*"
+  ]
+}

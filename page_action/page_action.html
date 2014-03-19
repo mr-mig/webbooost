@@ -1,0 +1,61 @@
+<!doctype html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../injectees/bootstrap/3.1.1/css/bootstrap.min.css"></link>
+</head>
+<style>
+
+body {
+	font-family: Georgia;
+	background-color: #EDEEE8;
+	color: #F9FAF7;
+}
+
+h4 {
+	color: #473065;
+	text-align: center;
+}
+
+.well {
+	background-color: #A5A6A0;
+	border-color: #98959C;
+}
+
+.glyphicon {
+	margin-right: 5px;
+}
+
+.badge {
+	background-color: #839044;
+	cursor: help;
+}
+
+</style>
+<body style="width:300px">
+	<script src="/js/helpers.js"></script>
+	<script src="/js/ga-config.js"></script>
+	<script src="pageAction.js"></script>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h4>This page was <b>boosted</b>!</h4>
+			  		<div class="well">
+			    		<div>
+			    			<span class="glyphicon glyphicon-download"></span> Resources: <span id="resources-count" class="badge pull-right" title="Shows total number of boosted files on this tab."></span>
+			    		</div>
+			    		<div>
+			    			<span class="glyphicon glyphicon-time"></span> Time saved: <span id="time-count" class="badge pull-right" title="Shows how much time have you saved loading pages in this tab."></span>
+			    		</div>
+			    		<div>
+			    			<span class="glyphicon glyphicon-dashboard"></span> Total time saved: <span id="total-time-count" class="badge pull-right" title="Shows how much time have you saved using the extension in all tabs."></span>
+			    		</div>
+			  		</div>
+			</div>
+		</div>
+		<!-- <div class="row">
+			<div class="col-xs-12" style="text-align: center">
+				<a id="twi-btn" href="https://twitter.com/share" class="twitter-share-button" data-hashtags="wow,webbooost,chrome" data-via="webbooost" data-url="http://bit.ly/webbooost" data-counturl="http://webbooost.fse.guru" data-lang="en">Tweet</a>
+			</div>
+		</div>
+		-->	
+	</div>
+</body>
