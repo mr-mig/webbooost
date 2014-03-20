@@ -99,9 +99,9 @@ var hash_config = {
 		'1.0.1'
 		],
 		urls : [
-			'ajax.googleapis.com/ajax/libs/angular/$version$/angular.min.js'
+			'ajax.googleapis.com/ajax/libs/angularjs/$version$/angular.min.js'
 		],
-		file : 'angularjs/$version$/angular.min.js'
+		file : 'angular/$version$/angular.min.js'
 	},
 
 	'webfontloader' : {
@@ -150,7 +150,7 @@ var hash_config = {
 		urls : [
 			'ajax.googleapis.com/ajax/libs/webfont/$version$/webfont.js'
 		],
-		file : ''
+		file : 'webfont/$version$/webfont.js'
 	},
 
 	'ga' : {
