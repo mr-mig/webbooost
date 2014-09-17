@@ -39,7 +39,7 @@ var reg_config = {
 		'1.4.2', 
 		'1.4.1'
 		],
-		file : 'jquery/$version$/jquery.min.js', 
+		file : 'jquery/$version$/jquery.min.js'
 	},
 	// wordpress pattern 
 	'jquery-migrate.min.js\\?ver=(.+)': {

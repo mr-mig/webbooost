@@ -238,4 +238,4 @@ var hash_config = {
 		],
 		file: 'font-awesome/$version$/css/font-awesome-4.0.0.css'
 	}
-}
+};
