@@ -19,3 +19,6 @@ random = (min, max) ->
 
 $id = (id) ->
 	document.getElementById id
+
+fn =
+	not: (cb)-> ()-> not cb()
