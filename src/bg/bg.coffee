@@ -1,9 +1,9 @@
 stats = require('../stats')
 stats.reset()
 
-hashCheck = require '../checkers/hashCheck'
-regCheck = require '../checkers/regCheck'
-interceptor = require '../requestInterceptor'
+hashCheck = require '../checkers/hash-check'
+regCheck = require '../checkers/reg-check'
+interceptor = require '../request-interceptor'
 
 checkers = [hashCheck, regCheck]
 
