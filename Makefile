@@ -1,18 +1,18 @@
-all:
+all: clean md copy compile
+	echo "Put the chrome build here"
 
-	mkdir -p dist/injectees dist/icons
+compile:
 	browserify -t coffeeify --extension=".coffee" ./src/bg/bg > ./dist/bg.js
 	browserify -t coffeeify --extension=".coffee" ./src/page-action/page-action > ./dist/page-action.js
+
+copy:
 	cp ./src/page-action/*.html ./dist
-	cp -r ./injectees ./dist/injectees
-	cp -r ./icons ./dist/icons
+	cp -r ./injectees ./dist
+	cp -r ./icons ./dist
 	cp ./manifest.json ./dist
 
-	dist
-
-dist:
-
-	echo "Put the chrome build here"
+md:
+	mkdir -p dist/injectees dist/icons
 
 clean:
 
