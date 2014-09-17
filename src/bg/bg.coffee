@@ -1,40 +1,27 @@
-loadStats = require('../helpers')()
+stats = require('../stats')
+stats.reset()
 
-ALLOW_REQUEST =
-	cancel: false
+hashCheck = require '../checkers/hashCheck'
+regCheck = require '../checkers/regCheck'
+interceptor = require '../requestInterceptor'
 
-checkUrl = (details)->
-	return ALLOW_REQUEST if details.method isnt 'GET'
-
-	urlData = details.url.split '://'
-	result = hashChecker.check urlData, details.tabId
-
-	return result if result?.redirectUrl
-
-	# this kind of script injection
-	# can potentionally break the page
-	result = regChecker.check urlData, details.tabId
-	return result if result?.redirectUrl
-
-	return ALLOW_REQUEST
+checkers = [hashCheck, regCheck]
 
 
-redirect = (url, tabId, originalUrl) ->
-	if tabId
-		if tabId > 0
-			chrome.pageAction.show tabId
+checkUrl = (request)->
+	return interceptor.ALLOW_REQUEST_TOKEN if request.method isnt 'GET'
 
-		stats.addBoost tabId
+	urlData = request.url.split '://'
 
-	console.log("boosted", originalUrl, js url)
+	for check in checkers
+		result = check urlData, request.tabId
+		return result if result?.redirectUrl
 
-	{redirectUrl: js url}
-
+	return interceptor.ALLOW_REQUEST_TOKEN
 
 chrome.webRequest.onBeforeRequest.addListener(
 	checkUrl,
 	urls: ['http://*/*', 'https://*/*', 'chrome-extension://*/*'],
 	types: ['script', 'stylesheet']
-
 	["blocking"]
 )
