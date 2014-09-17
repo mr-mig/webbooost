@@ -1,11 +1,11 @@
 h = require '../configs/hash-config'
-makeRedirect = require '../makeRedirect'
-interceptor = require '../requestInterceptor'
+interceptor = require '../request-interceptor'
+sx = require './config-syntax'
 
 module.exports = (url, tabId)->
 	return if url[0] is 'chrome-extension'
 
-	checkUrl = url[1].replace URL_QUERY_TAG, ''
+	checkUrl = url[1].replace sx.URL_QUERY_TAG, ''
 
 	# url totally match the library + version + cdn address
 	if comparisonHash[checkUrl]
@@ -13,11 +13,6 @@ module.exports = (url, tabId)->
 
 	return interceptor.ALLOW_REQUEST_TOKEN;
 
-
-
-VERSION_TAG = /\$version\$/
-NAME_TAG = /\$name\$/
-URL_QUERY_TAG = /\?.+$/
 
 comparisonHash = {};
 keys = Object.keys h;
@@ -29,11 +24,11 @@ keys.forEach (key)->
 	if entry.versions
 		entry.versions.forEach (version)->
 			entry.urls.forEach (url)->
-				hashUrl = url.replace VERSION_TAG, version
+				hashUrl = url.replace sx.VERSION_TAG, version
 				comparisonHash[hashUrl] =
-						entry.file.replace(NAME_TAG, key).replace(VERSION_TAG, version)
+						entry.file.replace(sx.NAME_TAG, key).replace(sx.VERSION_TAG, version)
 
 	else
 		entry.urls.forEach (url)->
 			comparisonHash[url] =
-					entry.file.replace(NAME_TAG, key)
+					entry.file.replace(sx.NAME_TAG, key)
