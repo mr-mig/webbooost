@@ -11,12 +11,7 @@
   },
   "background": {
     "scripts": [
-      "js/configs/reg_config.js",
-      "js/configs/hash_config.js",
-      "js/checkers/hashChecker.js",
-      "js/checkers/regChecker.js",
-      "js/helpers.js",
-      "js/bg/background.js"
+      "bg.js"
     ],
     "persistent": true
   },
@@ -26,7 +21,7 @@
       "38": "icons/icon32.png"
     },
     "default_title": "This page was boosted!",
-    "default_popup": "page_action/page_action.html"
+    "default_popup": "page-action/page-action.html"
   },
   "permissions": [
     "webRequest","webRequestBlocking","<all_urls>"
