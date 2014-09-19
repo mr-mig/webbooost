@@ -1,5 +1,4 @@
 all: clean md copy compile
-	echo "Put the chrome build here"
 
 compile:
 	browserify -t coffeeify --extension=".coffee" ./src/bg/bg > ./dist/bg.js
@@ -17,3 +16,15 @@ md:
 clean:
 
 	rm -rf dist/*
+
+pack:
+	./.utils/zip webboost.zip dist
+
+patch: all
+
+
+minor: all
+
+
+major: all
+

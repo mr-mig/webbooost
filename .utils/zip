@@ -1,0 +1,21 @@
+#!/usr/bin/env coffee
+
+if process.argv.length >= 4
+
+	path = require 'path'
+
+	args =
+		destination: 	process.argv[2].split('.zip')[0]
+		dir: 					path.resolve process.argv[3]
+
+	args.version = (require args.dir + '/manifest.json').version
+	console.log args
+
+	AmdZip = require 'adm-zip'
+	zip = new AmdZip()
+
+	zip.addLocalFolder args.dir
+	zip.writeZip args.destination + '-' + args.version + '.zip'
+else
+	process.argv.forEach (x, i)-> console.log 'arg['+ i + ']',x
+	console.log 'usage: ./zip file.zip folder'
