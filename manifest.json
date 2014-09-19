@@ -21,7 +21,7 @@
       "38": "icons/icon32.png"
     },
     "default_title": "This page was boosted!",
-    "default_popup": "page-action/page-action.html"
+    "default_popup": "page-action.html"
   },
   "permissions": [
     "webRequest","webRequestBlocking","<all_urls>"

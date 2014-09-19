@@ -1,9 +1,5 @@
 stats = require './stats'
-
-module.exports =
-	redirect: redirect
-	ALLOW_REQUEST_TOKEN: {cancel: false}
-
+js = require('./helpers').js
 
 redirect = (url, tabId, originalUrl) ->
 	if tabId
@@ -15,3 +11,7 @@ redirect = (url, tabId, originalUrl) ->
 	console.log "boosted", originalUrl, js url
 
 	{redirectUrl: js url}
+
+module.exports =
+	redirect: redirect
+	ALLOW_REQUEST_TOKEN: {cancel: false}

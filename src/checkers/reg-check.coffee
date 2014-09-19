@@ -1,7 +1,7 @@
 config = require '../configs/reg-config'
 sx = require './config-syntax'
 interceptor = require '../request-interceptor'
-fn = require '../helpers'.fn
+fn = require('../helpers').fn
 
 keys = Object.keys config
 regExps = {}

@@ -1,4 +1,5 @@
 stats = require '../stats'
+$id = require('../helpers').$id
 
 chrome.tabs.getSelected null, (tab)->
 	stat = stats.get tab.id

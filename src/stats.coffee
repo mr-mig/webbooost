@@ -1,3 +1,5 @@
+random = require('./helpers').random
+
 if localStorage["stats"]
 	stats = JSON.parse localStorage["stats"]
 

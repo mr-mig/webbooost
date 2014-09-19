@@ -4,13 +4,6 @@ Array::last = ->
 String::endsWith = (suffix) ->
 	@indexOf(suffix, @length - suffix.length) isnt -1
 
-module.exports =
-	js: js
-	getRandom: random
-	loadStats: loadStats
-	$id : $id
-
-
 js = (filename) ->
 	chrome.extension.getURL ['/injectees/', filename].join ""
 
@@ -21,4 +14,12 @@ $id = (id) ->
 	document.getElementById id
 
 fn =
-	not: (cb)-> ()-> not cb()
+	not: (cb)->
+		()->
+			not cb()
+
+module.exports =
+	js: js
+	random: random
+	$id: $id
+	fn: fn
