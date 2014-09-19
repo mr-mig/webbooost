@@ -1,30 +1,32 @@
+distdir = ./dist
+
 all: clean md copy compile
 
 compile:
-	browserify -t coffeeify --extension=".coffee" ./src/bg/bg > ./dist/bg.js
-	browserify -t coffeeify --extension=".coffee" ./src/page-action/page-action > ./dist/page-action.js
+	browserify -t coffeeify --extension=".coffee" ./src/bg/bg > $(distdir)/bg.js
+	browserify -t coffeeify --extension=".coffee" ./src/page-action/page-action > $(distdir)/page-action.js
 
 copy:
-	cp ./src/page-action/*.html ./dist
-	cp -r ./injectees ./dist
-	cp -r ./icons ./dist
-	cp ./manifest.json ./dist
+	cp ./src/page-action/*.html $(distdir)
+	cp -r ./injectees $(distdir)
+	cp -r ./icons $(distdir)
+	cp ./manifest.json $(distdir)
 
 md:
-	mkdir -p dist/injectees dist/icons
+	mkdir -p dist/injectees $(distdir)/icons
 
 clean:
 
-	rm -rf dist/*
+	rm -rf $(distdir)/*
 
 pack:
-	./.utils/zip webboost.zip dist
+	cd $(distdir) && zip -9 -r ../webboost-$(shell cat $(distdir)/manifest.json | node -pe "JSON.parse(require('fs').readFileSync('/dev/stdin').toString()).version").zip * -x *.DS_Store*
 
 patch: all
-	./.utils/bump patch dist
+	./.utils/bump patch $(distdir)
 
 minor: all
-	./.utils/bump minor dist
+	./.utils/bump minor $(distdir)
 
 major: all
-	./.utils/bump major dist
+	./.utils/bump major $(distdir)
