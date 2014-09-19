@@ -21,10 +21,10 @@ pack:
 	./.utils/zip webboost.zip dist
 
 patch: all
-
+	./.utils/bump patch dist
 
 minor: all
-
+	./.utils/bump minor dist
 
 major: all
-
+	./.utils/bump major dist
