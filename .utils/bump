@@ -20,7 +20,7 @@ if process.argv.length >= 4
 	console.log 'version bumped:',version
 
 	manifest.version = version
-	fs.writeFileSync manifestFile, JSON.stringify(manifest)
+	fs.writeFileSync manifestFile, JSON.stringify(manifest, null, 2)
 
 else
 	console.log 'usage: bump <action>'

@@ -23,10 +23,10 @@ pack:
 	cd $(distdir) && zip -9 -r ../webboost-$(shell cat $(distdir)/manifest.json | node -pe "JSON.parse(require('fs').readFileSync('/dev/stdin').toString()).version").zip * -x *.DS_Store*
 
 patch: all
-	./.utils/bump patch $(distdir)
+	./.utils/bump patch ./
 
 minor: all
-	./.utils/bump minor $(distdir)
+	./.utils/bump minor ./
 
 major: all
-	./.utils/bump major $(distdir)
+	./.utils/bump major ./
