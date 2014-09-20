@@ -48,7 +48,7 @@ module.exports =
 		]
 		file: 'jquery-migrate/$version$/jquery-migrate.min.js'
 
-	'jquery-(.+?).min.js$':
+	'jquery-(.+?[^ui]).min.js$':
 		versions: [
 			'2.1.0'
 			'2.0.3'
