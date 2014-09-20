@@ -13,6 +13,8 @@ keys.forEach (key)->
 module.exports = (url, tabId)->
 	url = url[1]
 
+	console.log('reg check', url)
+
 	matchedKeys = keys.filter matchUrl url
 	versionedKeys = matchedKeys.filter withVersions
 	unversionedKeys = matchedKeys.filter fn.not withVersions

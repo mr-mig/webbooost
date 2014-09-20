@@ -7,7 +7,7 @@ module.exports = (url, tabId)->
 	return if url[0] is 'chrome-extension'
 
 	checkUrl = url[1].replace sx.URL_QUERY_TAG, ''
-	console.log('checkurl', checkUrl)
+	console.log('hash check', checkUrl)
 
 	# url totally match the library + version + cdn address
 	if comparisonHash[checkUrl]
