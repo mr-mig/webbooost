@@ -4,6 +4,7 @@ stats.reset()
 hashCheck = require '../checkers/hash-check'
 regCheck = require '../checkers/reg-check'
 interceptor = require '../request-interceptor'
+parseUrl = require '../url'
 
 checkers = [hashCheck, regCheck]
 
@@ -11,10 +12,10 @@ checkers = [hashCheck, regCheck]
 checkUrl = (request)->
 	return interceptor.ALLOW_REQUEST_TOKEN if request.method isnt 'GET'
 
-	urlData = request.url.split '://'
+	normalizedUrl = parseUrl request.url
 
 	for check in checkers
-		result = check urlData, request.tabId
+		result = check normalizedUrl, request.tabId
 		return result if result?.redirectUrl
 
 	return interceptor.ALLOW_REQUEST_TOKEN

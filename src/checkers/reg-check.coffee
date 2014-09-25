@@ -10,8 +10,9 @@ regExps = {}
 keys.forEach (key)->
 	regExps[key] = new RegExp key
 
-module.exports = (url, tabId)->
-	url = url[1]
+module.exports = (normalizedUrl, tabId)->
+	return if normalizedUrl.isExtension
+	url = normalizedUrl.uri
 
 	console.log('reg check', url)
 
