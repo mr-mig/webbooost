@@ -13,8 +13,13 @@ if process.argv.length >= 4
 
 	switch process.argv[2]
 		when 'patch' then version[2] = parseInt(version[2]) + 1
-		when 'minor' then version[1] = parseInt(version[1]) + 1
-		when 'major' then version[0] = parseInt(version[0]) + 1
+		when 'minor'
+			version[1] = parseInt(version[1]) + 1
+			version[2] = 0
+		when 'major'
+			version[0] = parseInt(version[0]) + 1
+			version[1] = 0
+			version[2] = 0
 
 	version = version.join '.'
 	console.log 'version bumped:',version
