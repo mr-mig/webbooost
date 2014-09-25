@@ -1,8 +1,8 @@
 {
-  "name": "WebBooost",
-  "version": "1.5.0",
+  "name": "WebBooost - Faster Web Browsing",
+  "version": "1.6.0",
   "manifest_version": 2,
-  "description": "This extension boosts websites loading speed!",
+  "description": "Make your web pages load faster!",
   "homepage_url": "http://www.fse.guru",
   "icons": {
     "16": "icons/icon16.png",
