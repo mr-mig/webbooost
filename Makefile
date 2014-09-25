@@ -19,14 +19,14 @@ clean:
 
 	rm -rf $(distdir)/*
 
-pack:
-	cd $(distdir) && zip -9 -r ../webboost-$(shell cat $(distdir)/manifest.json | node -pe "JSON.parse(require('fs').readFileSync('/dev/stdin').toString()).version").zip * -x *.DS_Store*
+pack: all
+	cd $(distdir) && zip -9 -r ../releases/webboost-$(shell cat $(distdir)/manifest.json | node -pe "JSON.parse(require('fs').readFileSync('/dev/stdin').toString()).version").zip * -x *.DS_Store*
 
-patch: all
+patch:
 	./.utils/bump patch ./
 
-minor: all
+minor:
 	./.utils/bump minor ./
 
-major: all
+major:
 	./.utils/bump major ./
