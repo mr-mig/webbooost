@@ -10,9 +10,10 @@ module.exports = (normalizedUrl, tabId)->
 
 	# url totally match the library + version + cdn address
 	if comparisonHash[checkUrl]
+		normalizedUrl.boostedBy = 'hash'
 		interceptor.redirect comparisonHash[checkUrl], tabId, normalizedUrl
-
-	interceptor.ALLOW_REQUEST_TOKEN;
+	else
+		interceptor.ALLOW_REQUEST_TOKEN;
 
 
 comparisonHash = {};
