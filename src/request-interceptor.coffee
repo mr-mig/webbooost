@@ -1,14 +1,14 @@
 stats = require './stats'
 js = require('./helpers').js
 
-redirect = (url, tabId, originalUrl) ->
+redirect = (url, tabId, normalizedUrl) ->
 	if tabId
 		if tabId > 0
 			chrome.pageAction.show tabId
 
-		stats.addBoost tabId
+		stats.addBoost tabId, normalizedUrl
 
-	console.log "boosted", originalUrl, js url
+	console.log "boosted", normalizedUrl, js url
 
 	{redirectUrl: js url}
 

@@ -3,13 +3,15 @@ $id = require('../helpers').$id
 
 chrome.tabs.getSelected null, (tab)->
 	stat = stats.get tab.id
-	stat ?= {count: 0, time: 0}
+	stat ?= {count: 0, libs: []}
 
-	$id "resources-count"
+	$id 'resources-count'
 		.innerHTML = stat.count
-	$id "time-count"
-		.innerHTML = stat.time / 1000 + ' sec.'
-	$id "total-time-count"
-		.innerHTML = stats.totalTimeSaved / 1000 + ' sec.'
+	$id 'total-resources-count'
+		.innerHTML = stats.allStats.count
 
-	document.title = "I have saved " + stats.totalTimeSaved / 1000 + ' seconds while surfing the Web!'
+	stat.libs.forEach((entry)->
+		li = document.createElement 'li'
+		li.innerHTML = entry
+		$id('resources-list').appendChild li
+	)

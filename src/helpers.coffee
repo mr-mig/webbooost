@@ -1,9 +1,3 @@
-Array::last = ->
-	@[this.length - 1];
-
-String::endsWith = (suffix) ->
-	@indexOf(suffix, @length - suffix.length) isnt -1
-
 js = (filename) ->
 	chrome.extension.getURL ['/injectees/', filename].join ""
 

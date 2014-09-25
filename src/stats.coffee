@@ -3,24 +3,39 @@ random = require('./helpers').random
 if localStorage["stats"]
 	stats = JSON.parse localStorage["stats"]
 
-if not stats
-	stats =
-		tabStats: {}
-		allStats: {}
-		totalTimeSaved: 0
+stats ?= {}
+stats.tabStats ?= {}
+stats.allStats ?=
+	count : 0
+stats.allStats.libs ?= {}
 
-stats.addBoost = (tabId) ->
+console.log stats
+
+stats.addBoost = (tabId, normalizedUrl) ->
 	if not @tabStats[tabId]
 		@tabStats[tabId] =
 			count: 0
-			time: 0
+			libs: []
 
-	@tabStats[tabId].count += 1
+	entry = @tabStats[tabId]
+	lib = normalizedUrl.library
 
-	# hack
-	@tabStats[tabId].time += random 5, 30
+	# add stat for current tab
+	entry.count += 1
+	if lib not in entry.libs
+		entry.libs.push lib
+
+
+	# add global stat
+	stats.allStats.count += 1
+	if stats.allStats.libs[lib]
+		stats.allStats.libs[lib].count += 1
+	else
+		stats.allStats.libs[lib] =
+			count: 1
+
 	localStorage["stats"] = JSON.stringify @
-	@tabStats[tabId]
+	entry
 
 stats.get = (id) ->
 	stats.tabStats[id]
