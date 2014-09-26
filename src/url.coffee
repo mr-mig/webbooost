@@ -10,9 +10,6 @@ module.exports = (url)->
 			uri: path.replace sx.URL_QUERY_TAG, ''
 		}
 	result.isExtension = result.schema is 'chrome-extension'
-
-	parsedLibrary = result.uri.split('/')
-	[..., lib] = parsedLibrary
-	result.library = lib
+	result.library = result.uri.split('/').pop()
 
 	result
