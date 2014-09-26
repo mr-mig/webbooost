@@ -1,7 +1,6 @@
-webbooost
-=========
+![Logo](http://mrmig-statis-assets.s3-website-eu-west-1.amazonaws.com/medium_tile.png)
 
-Chrome extension for faster web browsing.
+Chrome extension for faster web browsing. http://bit.ly/webbooost
 
 How it works?
 =============
