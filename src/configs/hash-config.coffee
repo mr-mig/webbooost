@@ -200,7 +200,8 @@ module.exports =
 	'bootstrap-js':
 		versions: ['2.3.2', '3.1.1']
 		urls: [
-			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/js/bootstrap.min.js'
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/js/bootstrap.min.js',
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/js/bootstrap.min.js'
 		]
 		file: 'bootstrap/$version$/js/bootstrap.min.js'
 
@@ -208,7 +209,8 @@ module.exports =
 	'bootstrap-theme-css':
 		versions: ['3.1.1']
 		urls: [
-			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-theme.min.css'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-theme.min.css',
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.min.css'
 		]
 		file: 'bootstrap/$version$/js/bootstrap-theme.min.css'
 
