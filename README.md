@@ -1,5 +1,4 @@
-webbooost
-=========
+![Logo](https://dl.dropboxusercontent.com/u/18672724/Large%20tile.png)
 
 Chrome extension for faster web browsing. http://bit.ly/webbooost
 
