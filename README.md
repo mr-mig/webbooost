@@ -1,7 +1,7 @@
 webbooost
 =========
 
-Chrome extension for faster web browsing.
+Chrome extension for faster web browsing. http://bit.ly/webbooost
 
 How it works?
 =============
