@@ -186,6 +186,11 @@ module.exports =
 		]
 		file: 'twitter/client.js'
 
+	'facebook':
+		urls: [
+			'connect.facebook.net/en_US/all.js'
+		],
+		file: 'facebook/all.js'
 
 	'swfobject':
 		versions: ['2.2', '2.1']

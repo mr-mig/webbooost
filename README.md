@@ -45,6 +45,7 @@ Libraries covered:
 * Bootstrap JS (2.3.2, 3.1.1)
 * Bootstrap CSS  (2.3.2, 3.1.1)
 * Font Awesome (3.2.1, 4.0.0)
+* facebook (en_US/all.js)
 
 Is it really making something faster?
 =====================
