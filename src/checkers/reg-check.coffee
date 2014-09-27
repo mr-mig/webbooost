@@ -32,7 +32,7 @@ module.exports = (normalizedUrl, tabId)->
 
 	if newUrls.length > 0
 		url.boostedBy = 'reg'
-		interceptor.redirect newUrls[0], tabId, url
+		interceptor.redirect newUrls[0], tabId, normalizedUrl
 	else
 		interceptor.ALLOW_REQUEST_TOKEN;
 
