@@ -9,8 +9,8 @@ $id = (id) ->
 
 fn =
 	not: (cb)->
-		()->
-			not cb()
+		->
+			not cb arguments...
 
 module.exports =
 	js: js

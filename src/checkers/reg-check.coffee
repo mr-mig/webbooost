@@ -31,7 +31,7 @@ module.exports = (normalizedUrl, tabId)->
 	newUrls = substitutedVersionedUrls.concat substitutedUnversionedUrls
 
 	if newUrls.length > 0
-		url.boostedBy = 'reg'
+		normalizedUrl.boostedBy = 'reg'
 		interceptor.redirect newUrls[0], tabId, normalizedUrl
 	else
 		interceptor.ALLOW_REQUEST_TOKEN;
@@ -40,9 +40,8 @@ matchUrl = (url)->
 	(key)->
 		regExps[key].test url
 
-withVersions = (url)->
-	(key) ->
-		config[key].versions isnt undefined
+withVersions = (key) ->
+	config[key].versions isnt undefined
 
 extractVersion = (url)->
 	(key)->
