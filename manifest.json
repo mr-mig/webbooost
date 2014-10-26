@@ -1,5 +1,6 @@
 {
   "name": "WebBooost - Faster Web Browsing",
+	"short_name": "Webbooost",
   "version": "1.9.1",
   "manifest_version": 2,
   "description": "Make your web pages load faster!",
