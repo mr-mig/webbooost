@@ -1,12 +1,17 @@
+semver = '(\\s*[v=]*\\s*[0-9]+\\.[0-9]+\\.[0-9]+(-[0-9]+-?)?([a-zA-Z-+][a-zA-Z0-9-.:]*)?)'
+
 module.exports =
-	'jquery.cookie.js$':
+	'jquery cookie':
+		pattern: 'jquery.cookie.js$'
 		file: 'jquery/jquery.cookie.plugin.js'
 
-	'jquery.form.js$':
+	'jquery form':
+		pattern: 'jquery.form.js$'
 		file: 'jquery/jquery.form.js'
 
 # wordpress-specific pattern
-	'jquery.js\\?ver=(.+)':
+ 'wordpress-specific jquery':
+		pattern: "jquery.js\\?ver=#{semver}"
 		versions: [
 			'2.1.0'
 			'2.0.3'
@@ -42,19 +47,23 @@ module.exports =
 		file: 'jquery/$version$/jquery.min.js'
 
 # wordpress-specific pattern
-	'jquery-migrate.min.js\\?ver=(.+)':
+	'wordpress-specific jquery-migrate':
+		pattern: "jquery-migrate.min.js\\?ver=#{semver}"
 		versions: [
 			'1.2.1'
 		]
 		file: 'jquery-migrate/$version$/jquery-migrate.min.js'
 
-	'jquery-migrate.min.js':
+	'jquery-migrate w/o version':
+		pattern:'jquery-migrate.min.js'
 		file: 'jquery-migrate/1.2.1/jquery-migrate.min.js'
 
-	'jquery-migrate-(.+?).min.js':
+	'jquery-migrate w version':
+		pattern: "jquery-migrate-#{semver}.min.js"
 		file: 'jquery-migrate/1.2.1/jquery-migrate.min.js'
 
-	'jquery-([^ui|^migrate].+?).min.js$':
+	'jquery':
+		pattern: "jquery-#{semver}.min.js$"
 		versions: [
 			'2.1.0'
 			'2.0.3'

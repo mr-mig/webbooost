@@ -8,7 +8,9 @@ regExps = {}
 
 # prebuild regexps
 keys.forEach (key)->
-	regExps[key] = new RegExp key
+	regExps[key] = new RegExp config[key].pattern
+
+console.log 'regexps in regcheck ', regExps
 
 module.exports = (normalizedUrl, tabId)->
 	return if normalizedUrl.isExtension
