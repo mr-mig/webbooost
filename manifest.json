@@ -1,7 +1,7 @@
 {
-  "name": "WebBoost - Faster Web Browsing",
-  "short_name": "Webboost",
-  "version": "1.9.2",
+  "name": "Web Boost - Faster Web Browsing",
+  "short_name": "Webbooost",
+  "version": "1.9.3",
   "manifest_version": 2,
   "description": "Make your web pages load faster! Boost browser speed!",
   "homepage_url": "http://www.fse.guru",
