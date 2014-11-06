@@ -174,14 +174,6 @@ module.exports =
 		]
 		file: 'google/plusone.js'
 
-
-	'twitter':
-		urls: [
-			'platform.twitter.com/widgets.js'
-		]
-		file: 'twitter/widgets.js'
-
-
 	'twitter-client':
 		urls: [
 			'platform.twitter.com/js/tfw/hub/client.js'
