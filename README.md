@@ -1,5 +1,7 @@
 ![Logo](http://mrmig-statis-assets.s3-website-eu-west-1.amazonaws.com/medium_tile.png)
 
+[![bitHound Score](https://www.bithound.io/mr-mig/webbooost/badges/score.svg)](https://www.bithound.io/mr-mig/webbooost)
+
 Chrome extension for faster web browsing. http://bit.ly/webbooost
 
 How it works?
