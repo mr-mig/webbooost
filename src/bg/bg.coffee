@@ -3,10 +3,11 @@ stats.reset()
 
 hashCheck = require '../checkers/hash-check'
 regCheck = require '../checkers/reg-check'
+msvpCheck = require '../checkers/msvp-check'
 interceptor = require '../request-interceptor'
 parseUrl = require '../url'
 
-checkers = [hashCheck, regCheck]
+checkers = [hashCheck, regCheck, msvpCheck]
 
 
 checkUrl = (request)->
@@ -16,7 +17,7 @@ checkUrl = (request)->
 
 	for check in checkers
 		result = check normalizedUrl, request.tabId
-		return result if result?.redirectUrl
+		return result if result?.redirectUrl or result?.cancel
 
 	return interceptor.ALLOW_REQUEST_TOKEN
 

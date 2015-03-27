@@ -13,6 +13,8 @@ module.exports = (url)->
 
 	parsedLibrary = result.uri.split('/')
 	[..., lib] = parsedLibrary
+
+	result.host = parsedLibrary[0]
 	result.library = lib
 
 	result
