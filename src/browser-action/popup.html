@@ -1,0 +1,164 @@
+<!doctype html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../injectees/bootstrap/3.1.1/css/bootstrap.min.css"></link>
+</head>
+<style>
+
+	body {
+		font-size: 13px;
+		color: rgb(200, 200, 200);
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+		background-color: rgb(39, 43, 48);
+		font-variant: small-caps;
+	}
+
+	#resources-list {
+		color: white;
+	}
+
+	.panel-default {
+		border-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.panel {
+		margin-top: 20px;
+		background-color: rgb(46, 51, 56);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	}
+
+	.row:first-child {
+		margin-bottom: 10px;
+	}
+
+	.panel-default > .panel-heading {
+		color: rgb(200, 200, 200);
+		background-color: rgb(62, 68, 76);
+		border-color: rgba(0, 0, 0, 0.6);
+	}
+
+	h3 {
+		text-align: center;
+	}
+
+	.glyphicon {
+		margin-right: 5px;
+	}
+
+	.badge {
+		background-color: #839044;
+		cursor: help;
+	}
+
+	.switch-container {
+		position: relative;
+		height: 20px;
+		top: 10px;
+	}
+
+	.switch-tail {
+		width: 50px;
+		height: 15px;
+		background: #839044;
+		box-shadow: inset 0 0 0 8px #4a4a4a, 0 0 0 1px rgb(200, 200, 200);
+		border-radius: 30px;
+		display: block;
+		top: 0px;
+		left: 0px;
+		position: absolute;
+		z-index: 1;
+		transition: all 300ms ease-in 0s;
+		cursor: pointer;
+	}
+
+	.switch-tail:empty {
+		display: inline;
+	}
+
+	#switch {
+		top: -2px;
+		position: absolute;
+		left: 0px;
+	}
+
+	#switch:before {
+		content: "";
+		position: absolute;
+		top: -4px;
+		left: -2px;
+		height: 20px;
+		width: 20px;
+		border-radius: 50%;
+		display: block;
+		background: #839044;
+		border: none;
+		z-index: 2;
+		box-shadow: inset 0 0 0 10px #5f5f5f, 0 0 5px 0 #000;
+		transition: box-shadow 500ms ease-in 0s, left 300ms ease-in 0s;
+		cursor: pointer;
+	}
+
+	#switch:checked:before {
+		left: 35px;
+		box-shadow: inset 0 0 0 0 #839044, 0 0 5px 0 #000;
+	}
+
+	#switch:checked + .switch-tail {
+		box-shadow: inset 0 0 0 0 #4a4a4a, 0 0 0 1px rgb(200, 200, 200);
+	}
+
+</style>
+<body style="width:300px">
+<script src="popup.js"></script>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+
+					Configuration for <b id="site-id"></b>
+
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="switch-container">
+								<input type="checkbox" id="switch"/>
+								<label for="switch" class="label switch-tail"></label>
+							</div>
+						</div>
+						<div class="col-xs-8">
+
+							Boosting is <b id="enabled">enabled</b> <b id="disabled">disabled</b> for this website.
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<span class="glyphicon glyphicon-download"></span>
+							Blocks saved on this website: <span id="resources-count"
+							                                    class="badge pull-right"
+							                                    title="Shows total number of boosted files on this tab."></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<ul id="resources-list">
+
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<span class="glyphicon glyphicon-dashboard"></span>
+							Total number of saved blocks:
+						<span id="total-resources-count"
+						      class="badge pull-right"
+						      title="Shows total numbers of all boosted files"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
