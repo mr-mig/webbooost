@@ -1,4 +1,4 @@
-parseUrl = require('url')
+parseUrl = require('./url')
 
 js = (filename) ->
 	chrome.extension.getURL ['/injectees/', filename].join ""
@@ -16,7 +16,7 @@ fn =
 
 # return normalized website URI
 getUriFromTab = (tab) ->
-	parseUrl(tab.url.replace(/#.*$/, '')).uri
+	parseUrl(tab.url.replace(/#.*$/, '')).host
 
 
 module.exports = {

@@ -1,6 +1,7 @@
 stats = require '../stats'
 state = require '../state'
 $id = require('../helpers').$id
+getUri = require('../helpers').getUriFromTab
 
 chrome.tabs.getSelected null, (tab)->
 	stats.get tab.id, (stat) ->
@@ -19,12 +20,27 @@ chrome.tabs.getSelected null, (tab)->
 
 	state.get tab.id, (pageConfig) ->
 		if pageConfig.disabled
-			$id('enabled').style.display = 'none'
-			$id('disabled').style.display = 'inline'
-			$id('switch').checked = false
-
+			disable()
 		else
-			$id('disabled').style.display = 'none'
-			$id('enabled').style.display = 'inline'
-			$id('switch').checked = true
+			enable()
 
+		$id('switch').addEventListener 'change', (e) ->
+			if @checked
+				pageConfig.disabled = false;
+				enable()
+			else
+				pageConfig.disabled = true;
+				disable()
+			state.sync(pageConfig)
+
+	$id('site-id').innerHTML = getUri(tab);
+
+disable = ()->
+	$id('enabled').style.display = 'none'
+	$id('disabled').style.display = 'inline'
+	$id('switch').checked = false
+
+enable = () ->
+	$id('disabled').style.display = 'none'
+	$id('enabled').style.display = 'inline'
+	$id('switch').checked = true
