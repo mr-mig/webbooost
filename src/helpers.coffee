@@ -1,3 +1,5 @@
+parseUrl = require('url')
+
 js = (filename) ->
 	chrome.extension.getURL ['/injectees/', filename].join ""
 
@@ -12,8 +14,15 @@ fn =
 		->
 			not cb arguments...
 
-module.exports =
-	js: js
-	random: random
-	$id: $id
-	fn: fn
+# return normalized website URI
+getUriFromTab = (tab) ->
+	parseUrl(tab.url.replace(/#.*$/, '')).uri
+
+
+module.exports = {
+	js
+	random
+	$id
+	fn
+	getUriFromTab
+}
