@@ -4,10 +4,10 @@ all: clean md copy compile
 
 compile:
 	browserify -t coffeeify --extension=".coffee" ./src/bg/bg > $(distdir)/bg.js
-	browserify -t coffeeify --extension=".coffee" ./src/page-action/page-action > $(distdir)/page-action.js
+	browserify -t coffeeify --extension=".coffee" ./src/browser-action/popup > $(distdir)/popup.js
 
 copy:
-	cp ./src/page-action/*.html $(distdir)
+	cp ./src/browser-action/*.html $(distdir)
 	cp -r ./injectees $(distdir)
 	cp -r ./icons $(distdir)
 	cp ./manifest.json $(distdir)
