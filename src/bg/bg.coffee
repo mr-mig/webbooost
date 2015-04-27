@@ -1,5 +1,4 @@
 stats = require('../stats')
-stats.reset()
 
 hashCheck = require '../checkers/hash-check'
 regCheck = require '../checkers/reg-check'
