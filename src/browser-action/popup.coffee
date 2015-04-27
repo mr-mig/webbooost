@@ -1,5 +1,5 @@
 stats = require '../stats'
-state = require '../state'
+state = require('../state')()
 $id = require('../helpers').$id
 getUri = require('../helpers').getUriFromTab
 

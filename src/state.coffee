@@ -1,19 +1,27 @@
 getUri = require('./helpers').getUriFromTab
 
-if localStorage["state"]
-	state = JSON.parse localStorage["state"]
+load = ()->
+	if localStorage["state"]
+		state = JSON.parse localStorage["state"]
 
-state ?= {}
+	state ?= {}
 
-state.get = (tabId, cb) ->
-	chrome.tabs.get tabId, (tab) =>
-		id = getUri(tab)
-		pageConfig = state[id] || { id }
-		cb(pageConfig)
 
-state.sync = (pageConfig) ->
-	state[pageConfig.id] = pageConfig
-	localStorage["state"] = JSON.stringify @
-	@
+	state.get = (tabId, cb) ->
+		chrome.tabs.get tabId, (tab) =>
+			id = getUri(tab)
+			pageConfig = state[id] || { id }
+			cb(pageConfig)
 
-module.exports = state
+	state.forHost = (host) ->
+		state[host]
+
+	state.sync = (pageConfig) ->
+		state[pageConfig.id] = pageConfig
+		localStorage["state"] = JSON.stringify @
+		@
+
+	state
+
+
+module.exports = load

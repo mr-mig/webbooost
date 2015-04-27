@@ -17,7 +17,7 @@ stats.addBoost = (tabId, normalizedUrl) ->
 		# .url requires "tabs" permission
 		pageUrl = getUriFromTab(tab)
 
-		console.log "page url", pageUrl
+		console.log tabId, normalizedUrl
 
 		if not @tabStats[pageUrl]
 			@tabStats[pageUrl] =
