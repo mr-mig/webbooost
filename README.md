@@ -39,7 +39,6 @@ Libraries covered:
 * jQuery-migrate
 * angular core (1.0.1 - 1.2.14)
 * webfontloader
-* google analytics (ga.js, analytics.js)
 * yandex metrika (watch.js)
 * google plus one (plusone.js)
 * twitter widgets (widgets.js, client.js)

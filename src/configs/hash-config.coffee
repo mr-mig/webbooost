@@ -149,19 +149,6 @@ module.exports =
 		]
 		file: 'webfont/$version$/webfont.js'
 
-	'ga':
-		urls: [
-			'www.google-analytics.com/ga.js'
-			'ssl.google-analytics.com/ga.js'
-		]
-		file: 'google/ga.js'
-
-	'analytics':
-		urls: [
-			'www.google-analytics.com/analytics.js'
-		]
-		file: 'google/analytics.js'
-
 	'yandex':
 		urls: [
 			'mc.yandex.ru/metrika/watch.js'
