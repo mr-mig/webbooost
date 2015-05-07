@@ -1122,7 +1122,6 @@ module.exports = {
 	'site.johnlewis.com',
 	'www.jouwstats.nl',
 	'www.jscount.com',
-	'cdn.jsdelivr.net',
 	'stats.jtvnw.net',
 	'ad.jugem.jp',
 	'a.jumptap.com',
