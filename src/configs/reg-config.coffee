@@ -1,4 +1,4 @@
-semver = '(\\s*[v=]*\\s*[0-9]+\\.[0-9]+\\.[0-9]+(-[0-9]+-?)?([a-zA-Z-+][a-zA-Z0-9-.:]*)?)'
+semver = '\\s*[v=]*\\s*([0-9]+\\.[0-9]+\\.[0-9]+(-[0-9]+-?)?([a-zA-Z-+][a-zA-Z0-9-.:]*)?)'
 
 module.exports =
 	'jquery cookie':
@@ -13,6 +13,9 @@ module.exports =
  'wordpress-specific jquery':
 		pattern: "jquery.js\\?ver=#{semver}"
 		versions: [
+			'2.1.4'
+			'2.1.3'
+			'2.1.1'
 			'2.1.0'
 			'2.0.3'
 			'2.0.2'
@@ -65,6 +68,9 @@ module.exports =
 	'jquery':
 		pattern: "jquery-#{semver}.min.js$"
 		versions: [
+			'2.1.4'
+			'2.1.3'
+			'2.1.1'
 			'2.1.0'
 			'2.0.3'
 			'2.0.2'
