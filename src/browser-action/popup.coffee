@@ -12,12 +12,6 @@ chrome.tabs.getSelected null, (tab)->
 		$id 'total-resources-count'
 			.innerHTML = stats.allStats.count
 
-		stat.libs.forEach((entry)->
-			li = document.createElement 'li'
-			li.innerHTML = entry
-			$id('resources-list').appendChild li
-		)
-
 	state.get tab.id, (pageConfig) ->
 		if pageConfig.disabled
 			disable()
