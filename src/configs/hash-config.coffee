@@ -1,6 +1,9 @@
 module.exports =
 	'jquery':
 		versions: [
+			'2.1.4'
+			'2.1.3'
+			'2.1.2'
 			'2.1.1'
 			'2.1.0'
 			'2.0.3'
@@ -41,6 +44,7 @@ module.exports =
 			'ajax.aspnetcdn.com/ajax/jQuery/jquery-$version$.min.js'
 			'cdnjs.cloudflare.com/ajax/libs/jquery/$version$/jquery.min.js'
 			'code.jquery.com/jquery-$version$.min.js'
+			'oss.maxcdn.com/jquery/$version$/jquery.min.js'
 		]
 		file: '$name$/$version$/jquery.min.js'
 
