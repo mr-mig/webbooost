@@ -16,7 +16,7 @@ module.exports = (normalizedUrl, tabId)->
 	return if normalizedUrl.isExtension
 	url = normalizedUrl.uri
 
-	console.log('reg check', url)
+#	console.log('reg check', url)
 
 	matchedKeys = keys.filter matchUrl url
 	versionedKeys = matchedKeys.filter withVersions

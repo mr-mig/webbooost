@@ -6,7 +6,7 @@ module.exports = (normalizedUrl, tabId)->
 	return if normalizedUrl.isExtension
 
 	checkHost = normalizedUrl.host
-	console.log('msvp check', checkHost)
+	# console.log('msvp check', checkHost)
 
 	# host totally match the MSVP entry
 	if comparisonHash[checkHost]

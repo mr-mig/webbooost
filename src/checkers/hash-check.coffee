@@ -6,7 +6,7 @@ module.exports = (normalizedUrl, tabId)->
 	return if normalizedUrl.isExtension
 
 	checkUrl = normalizedUrl.uri
-	console.log('hash check', checkUrl)
+	# console.log('hash check', checkUrl)
 
 	# url totally match the library + version + cdn address
 	if comparisonHash[checkUrl]
@@ -34,3 +34,5 @@ keys.forEach (key)->
 		entry.urls.forEach (url)->
 			comparisonHash[url] =
 					entry.file.replace(sx.NAME_TAG, key)
+
+console.log('comparison hash in hash-check', comparisonHash)

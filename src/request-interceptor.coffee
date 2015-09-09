@@ -7,14 +7,14 @@ logAction = (tabId, normalizedUrl) ->
 # redirect page resource to webboost resource
 redirect = (url, tabId, normalizedUrl) ->
 	logAction(tabId, normalizedUrl)
-	console.log "boosted", normalizedUrl, js url
+#	console.log "boosted", normalizedUrl, js url
 	{redirectUrl: js url}
 
 # used for msvp blocking
 # no resources will be loaded
 block = (url, tabId, normalizedUrl) ->
 	logAction(tabId, normalizedUrl)
-	console.log "blocked", normalizedUrl
+#	console.log "blocked", normalizedUrl
 	{cancel: true}
 
 module.exports =
