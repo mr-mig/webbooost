@@ -33,7 +33,6 @@ chrome.tabs.onUpdated.addListener (tabId, change, tab) ->
 		chrome.webRequest.onBeforeRequest.addListener(
 			tabListeners[tabId],
 			urls: ['http://*/*', 'https://*/*', 'chrome-extension://*/*'],
-			types: ['script', 'stylesheet'],
 			tabId: tab.id
 			["blocking"]
 		)
