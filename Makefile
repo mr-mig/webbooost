@@ -1,4 +1,5 @@
 distdir = ./dist
+TEST_RUNNER_BIN = ./node_modules/mocha/bin/mocha
 
 all: clean md copy compile
 
@@ -30,3 +31,9 @@ minor:
 
 major:
 	./.utils/bump major ./
+
+test:
+	@${TEST_RUNNER_BIN} --compilers coffee:coffee-script/register tests/*.coffee
+
+tdd:
+	@${TEST_RUNNER_BIN} -w --compilers coffee:coffee-script/register tests/*.coffee
