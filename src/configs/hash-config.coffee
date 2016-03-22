@@ -197,33 +197,215 @@ module.exports =
 		]
 		file: 'swfobject/$version$/swfobject.js'
 
-
-	'bootstrap-js':
-		versions: ['2.3.2', '3.1.1']
+	'bootstrap-min-js':
+		versions: ['2.1.1', '2.1.0', '2.2.0', '2.2.1', '2.2.2', '2.3.0', '2.3.1', '2.3.2', '3.0.0', '3.0.1', '3.0.2', '3.0.3', '3.1.0', '3.1.1', '3.2.0', '3.3.0', '3.3.1', '3.3.2', '3.3.3', '3.3.4', '3.3.5', '3.3.6']
 		urls: [
 			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/js/bootstrap.min.js',
+			'netdna.bootstrapcdn.com/bootstrap/$version$/js/bootstrap.min.js',
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/js/bootstrap.min.js',
 			'maxcdn.bootstrapcdn.com/bootstrap/$version$/js/bootstrap.min.js'
 		]
 		file: 'bootstrap/$version$/js/bootstrap.min.js'
 
-
-	'bootstrap-theme-css':
-		versions: ['3.1.1']
+	'bootstrap-js':
+		versions: ['2.1.0', '2.1.1', '2.2.0', '2.2.1', '2.2.2', '2.3.0', '2.3.1', '2.3.2', '3.0.0', '3.0.1', '3.0.2', '3.0.3', '3.1.0', '3.1.1', '3.2.0', '3.3.0', '3.3.1', '3.3.2', '3.3.3', '3.3.4', '3.3.5', '3.3.6']
 		urls: [
-			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-theme.min.css',
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/js/bootstrap.js',
+			'netdna.bootstrapcdn.com/bootstrap/$version$/js/bootstrap.js',
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/js/bootstrap.js'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/js/bootstrap.js'
+		]
+		file: 'bootstrap/$version$/js/bootstrap.js'
+
+	'bootstrap-min-css':
+		versions: ['2.1.0', '2.1.1', '2.2.0', '2.2.1', '2.2.2', '2.3.0', '2.3.1', '2.3.2', '3.0.0', '3.0.1', '3.0.2', '3.0.3', '3.1.0', '3.1.1', '3.2.0', '3.3.0', '3.3.1', '3.3.2', '3.3.3', '3.3.4', '3.3.5', '3.3.6']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap.min.css'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.min.css'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap.min.css'
 			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.min.css'
 		]
-		file: 'bootstrap/$version$/js/bootstrap-theme.min.css'
-
+		file: 'bootstrap/$version$/css/bootstrap.min.css'
 
 	'bootstrap-css':
-		versions: ['3.1.1', '2.3.2']
+		versions: ['2.1.0', '2.1.1', '2.2.0', '2.2.1', '2.2.2', '2.3.0', '2.3.1', '2.3.2', '3.0.0', '3.0.1', '3.0.2', '3.0.3', '3.1.0', '3.1.1', '3.2.0', '3.3.0', '3.3.1', '3.3.2', '3.3.3', '3.3.4', '3.3.5', '3.3.6']
 		urls: [
-			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.min.css'
-			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-combined.min.css'
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap.css'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.css'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.css'
 		]
-		file: 'bootstrap/3.1.1/css/bootstrap.min.css'
+		file: 'bootstrap/$version$/css/bootstrap.css'
 
+	'bootstrap-theme-min-css':
+		versions: ['3.0.0',  '3.0.1', '3.0.2', '3.0.3', '3.1.0', '3.1.1', '3.2.0', '3.3.0', '3.3.1', '3.3.2', '3.3.3', '3.3.4', '3.3.5', '3.3.6']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-theme.min.css',
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-theme.min.css',
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-theme.min.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-theme.min.css'
+		]
+		file: 'bootstrap/$version$/css/bootstrap-theme.min.css'
+
+	'bootstrap-theme-css':
+		versions: ['3.0.0',  '3.0.1', '3.0.2', '3.0.3', '3.1.0', '3.1.1', '3.2.0', '3.3.0', '3.3.1', '3.3.2', '3.3.3', '3.3.4', '3.3.5', '3.3.6']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-theme.css',
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-theme.css',
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-theme.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-theme.css'
+		]
+		file: 'bootstrap/$version$/css/bootstrap-theme.css'
+
+	'bootstrap-glyphicons-css':
+		versions: ['3.0.0']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-glyphicons.css',
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-glyphicons.css',
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-glyphicons.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-glyphicons.css'
+		]
+		file: 'bootstrap/$version$/css/bootstrap-glyphicons.css'
+
+	'bootstrap-fonts-glyphicons-eot':
+		versions: ['3.0.0', '3.0.1', '3.0.2', '3.0.3', '3.1.0', '3.1.1', '3.2.0', '3.3.0', '3.3.1', '3.3.2', '3.3.4', '3.3.5', '3.3.6']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/fonts/glyphicons-halflings-regular.eot',
+			'netdna.bootstrapcdn.com/bootstrap/$version$/fonts/glyphicons-halflings-regular.eot',
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/fonts/glyphicons-halflings-regular.eot'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/fonts/glyphicons-halflings-regular.eot'
+		]
+		file: 'bootstrap/$version$/fonts/glyphicons-halflings-regular.eot'
+
+	'bootstrap-fonts-glyphicons-svg':
+		versions: ['3.0.0', '3.0.1', '3.0.2', '3.0.3', '3.1.0', '3.1.1', '3.2.0', '3.3.0', '3.3.1', '3.3.2', '3.3.4', '3.3.5', '3.3.6']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/fonts/glyphicons-halflings-regular.svg',
+			'netdna.bootstrapcdn.com/bootstrap/$version$/fonts/glyphicons-halflings-regular.svg',
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/fonts/glyphicons-halflings-regular.svg'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/fonts/glyphicons-halflings-regular.svg'
+		]
+		file: 'bootstrap/$version$/fonts/glyphicons-halflings-regular.svg'
+
+	'bootstrap-fonts-glyphicons-ttf':
+		versions: ['3.0.0', '3.0.1', '3.0.2', '3.0.3', '3.1.0', '3.1.1', '3.2.0', '3.3.0', '3.3.1', '3.3.2', '3.3.4', '3.3.5', '3.3.6']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/fonts/glyphicons-halflings-regular.ttf',
+			'netdna.bootstrapcdn.com/bootstrap/$version$/fonts/glyphicons-halflings-regular.ttf',
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/fonts/glyphicons-halflings-regular.ttf'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/fonts/glyphicons-halflings-regular.ttf'
+		]
+		file: 'bootstrap/$version$/fonts/glyphicons-halflings-regular.ttf'
+
+	'bootstrap-fonts-glyphicons-woff':
+		versions: ['3.0.0', '3.0.1', '3.0.2', '3.0.3', '3.1.0', '3.1.1', '3.2.0', '3.3.0', '3.3.1', '3.3.2', '3.3.4', '3.3.5', '3.3.6']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/fonts/glyphicons-halflings-regular.woff',
+			'netdna.bootstrapcdn.com/bootstrap/$version$/fonts/glyphicons-halflings-regular.woff',
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/fonts/glyphicons-halflings-regular.woff'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/fonts/glyphicons-halflings-regular.woff'
+		]
+		file: 'bootstrap/$version$/fonts/glyphicons-halflings-regular.woff'
+
+	'old-bootstrap-responsive-css':
+		versions: ['2.1.1', '2.2.2']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-responsive.css'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-responsive.css'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-responsive.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-responsive.css'
+		]
+		file: 'bootstrap/$version$/css/bootstrap-responsive.css'
+
+	'old-bootstrap-responsive-min-css':
+		versions: ['2.1.1', '2.2.1', '2.2.2', '2.3.0', '2.3.1']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-responsive.min.css'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-responsive.min.css'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-responsive.min.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-responsive.min.css'
+		]
+		file: 'bootstrap/$version$/css/bootstrap-responsive.min.css'
+
+	'old-bootstrap-min-nr-css':
+		versions: ['2.1.0', '2.2.2']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap.min.nr.css'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.min.nr.css'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap.min.nr.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.min.nr.css'
+		]
+		file: 'bootstrap/$version$/css/bootstrap.min.nr.css'
+
+	'old-bootstrap-no-icons-min-css':
+		versions: ['2.1.0', '2.1.1', '2.2.0', '2.2.1', '2.2.2', '2.3.0', '2.3.1', '3.0.0']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap.no-icons.min.css'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.no-icons.min.css'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap.no-icons.min.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.no-icons.min.css'
+		]
+		file: 'bootstrap/$version$/css/bootstrap.no-icons.min.css'
+
+	'old-bootstrap-combined-min-css':
+		versions: ['2.1.0', '2.1.1', '2.2.0', '2.2.1', '2.2.2', '2.3.0', '2.3.1', '2.3.2']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-combined.min.css'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-combined.min.css'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-combined.min.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-combined.min.css'
+		]
+		file: 'bootstrap/$version$/css/bootstrap-combined.min.css'
+
+	'old-bootstrap-combined-for-cwd-min-css':
+		versions: ['2.1.1']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-combined-for-cwd.min.css'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-combined-for-cwd.min.css'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-combined-for-cwd.min.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-combined-for-cwd.min.css'
+		]
+		file: 'bootstrap/$version$/css/bootstrap-combined-for-cwd.min.css'
+
+	'old-bootstrap-combined-no-icon-css':
+		versions: ['2.3.0', '2.3.1', '2.3.2']
+			urls: [
+				'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
+				'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
+				'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
+				'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
+			]
+			file: 'bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
+
+	'old-bootstrap-no-responsive-no-icons-css':
+		versions: ['2.1.1', '2.2.0', '2.2.1', '2.3.2']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap.no-responsive.no-icons.min.css'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.no-responsive.no-icons.min.css'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap.no-responsive.no-icons.min.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap.no-responsive.no-icons.min.css'
+		]
+		file: 'bootstrap/$version$/css/bootstrap.no-responsive.no-icons.min.css'
+
+	'old-bootstrap-img':
+		versions: ['2.1.1', '2.2.0', '2.2.1', '2.2.2', '2.3.0', '2.3.1', '2.3.2']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/img/glyphicons-halflings.png'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/img/glyphicons-halflings.png'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/img/glyphicons-halflings.png'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/img/glyphicons-halflings.png'
+		]
+		file: 'bootstrap/$version$/img/glyphicons-halflings.png'
+
+	'old-bootstrap-img-white':
+		versions: ['2.1.1', '2.2.0', '2.2.1', '2.2.2', '2.3.0', '2.3.1', '2.3.2']
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/img/glyphicons-halflings-white.png'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/img/glyphicons-halflings-white.png'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/img/glyphicons-halflings-white.png'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/img/glyphicons-halflings-white.png'
+		]
+		file: 'bootstrap/$version$/img/glyphicons-halflings-white.png'
 
 	'font-awesome':
 		versions: ['3.2.1', '4.0.0']
