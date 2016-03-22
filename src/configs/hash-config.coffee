@@ -64,7 +64,7 @@ module.exports =
 			'cdnjs.cloudflare.com/ajax/libs/jquery/$version$/jquery.min.js'
 			'code.jquery.com/jquery-$version$.min.js'
 		]
-		file: 'jquery/1.9.1/jquery.min.js'
+		file: 'jquery/1.11.1/jquery.min.js'
 
 	'jquery-migrate':
 		versions: ['1.2.1']
@@ -169,6 +169,12 @@ module.exports =
 			'apis.google.com/js/plusone.js'
 		]
 		file: 'google/plusone.js'
+
+	'plusone-new':
+		urls: [
+			'apis.google.com/js/platform.js'
+		]
+		file: 'google/platform.js'
 
 	'twitter-client':
 		urls: [
