@@ -369,13 +369,13 @@ module.exports =
 
 	'old-bootstrap-combined-no-icon-css':
 		versions: ['2.3.0', '2.3.1', '2.3.2']
-			urls: [
-				'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
-				'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
-				'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
-				'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
-			]
-			file: 'bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
+		urls: [
+			'netdna.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
+			'netdna.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
+			'maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
+			'maxcdn.bootstrapcdn.com/bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
+		]
+		file: 'bootstrap/$version$/css/bootstrap-combined.no-icons.min.css'
 
 	'old-bootstrap-no-responsive-no-icons-css':
 		versions: ['2.1.1', '2.2.0', '2.2.1', '2.3.2']

@@ -1,14 +1,6 @@
 semver = '\\s*[v=]*\\s*([0-9]+\\.[0-9]+\\.[0-9]+(-[0-9]+-?)?([a-zA-Z-+][a-zA-Z0-9-.:]*)?)'
 
 module.exports =
-	'jquery cookie':
-		pattern: 'jquery.cookie.js$'
-		file: 'jquery/jquery.cookie.plugin.js'
-
-	'jquery form':
-		pattern: 'jquery.form.js$'
-		file: 'jquery/jquery.form.js'
-
 # wordpress-specific pattern
  'wordpress-specific jquery':
 		pattern: "jquery.js\\?ver=#{semver}"
