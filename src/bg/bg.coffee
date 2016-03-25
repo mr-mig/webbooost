@@ -46,7 +46,7 @@ chrome.tabs.onRemoved.addListener (tabId, removeObj) ->
 # First time impression
 chrome.runtime.onInstalled.addListener (details) ->
 	if details.reason is 'install'
-		chrome.tabs.create {url: 'https://www.facebook.com/Web-Boost-1043728149033449/app/135876083099764/'}
+		chrome.tabs.create {url: 'https://www.facebook.com/WebBoostExtension/app/135876083099764/'}
 
 
 checkUrl = (tab) ->
