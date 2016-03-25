@@ -43,6 +43,12 @@ chrome.tabs.onRemoved.addListener (tabId, removeObj) ->
 	tabListeners[tabId] = null
 
 
+# First time impression
+chrome.runtime.onInstalled.addListener (details) ->
+	if details.reason is 'install'
+		chrome.tabs.create {url: 'https://www.facebook.com/Web-Boost-1043728149033449/app/135876083099764/'}
+
+
 checkUrl = (tab) ->
 	# tab object is immutable
 	# So there is a guarantee that tab.url will be the same in this scope

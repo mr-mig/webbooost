@@ -33,12 +33,16 @@
 			margin-top: 15px;
 		}
 
-		a {
+		a, a:visited, a:hover, a:focus {
 			color: rgb(255, 215, 0);
 		}
 
-		a:visited {
+		#got-question {
 			color: rgb(255, 215, 0);
+		}
+
+		.icon {
+			padding-left: 5px;
 		}
 
 		.row:first-child {
@@ -177,10 +181,19 @@
 
 					<div class="row">
 						<div class="col-xs-12 text-center">
-							<a href="http://twitter.com/webbooost" target="_blank">
-								Got a question? Ask on twitter
-								<img height="15px" src="icons/twitter.svg" alt=""/>
-							</a>
+							<div id="got-question">Got a question?</div>
+							<div>
+								<a href="http://twitter.com/webbooost" target="_blank">
+									Ask on Twitter
+									<img class="icon" height="15px" src="icons/twitter.svg" alt=""/>
+								</a>
+							</div>
+							<div>
+								<a href="https://www.facebook.com/Web-Boost-1043728149033449" target="_blank">
+									Ask on Facebook
+									<img class="icon" height="15px" src="icons/facebook.svg" alt=""/>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
