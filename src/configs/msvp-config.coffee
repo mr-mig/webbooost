@@ -16389,7 +16389,6 @@ module.exports = {
 	'st.sageanalyst.net'
 	'sugoicounter.com'
 	'superstats.com'
-	's.youtube.com'
 	'systweak.com'
 	'tagging.outrider.com'
 	'targetnet.com'
