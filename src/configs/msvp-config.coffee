@@ -26997,4 +26997,7 @@ module.exports = {
 	'zeusclicks.com'
 	'zintext.com'
 	'zmedia.com'
+	'cdn.onedmp.com'
+	'globalteaser.ru'
+	'lottosend.org'
 }
