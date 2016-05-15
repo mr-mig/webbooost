@@ -26997,7 +26997,18 @@ module.exports = {
 	'zeusclicks.com'
 	'zintext.com'
 	'zmedia.com'
+
 	'cdn.onedmp.com'
 	'globalteaser.ru'
 	'lottosend.org'
+	'skycdnhost.com'
+	'obhodsb.com'
+	'smilered.com'
+	'psma02.com'
+	'psmardr.com'
+	'uua.bvyvk.space'
+	'meofur.ru'
+	'mg.yadro.ru'
+	'c.marketgid.com'
+	'imgg.marketgid.com'
 }
