@@ -26994,6 +26994,8 @@ module.exports = {
 	'zeusclicks.com'
 	'zintext.com'
 	'zmedia.com'
+	
+#	Added manually in webbooost
 
 	'cdn.onedmp.com'
 	'globalteaser.ru'
