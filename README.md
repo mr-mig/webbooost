@@ -20,7 +20,7 @@ The libraries from CDNs will be served locally from the extension.
 What is included?
 ===========================
 
-You can find the CDN and library usage research in [this blog post](http://www.fse.guru/2014/03/cdn-usage-and-javascript-library).
+You can find the CDN and library usage research in [this blog post](http://mtdv.io/2014-03-cdn-usage-and-javascript-library/).
 
 CDNs covered:
 
