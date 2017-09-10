@@ -132,5 +132,7 @@ sftp-config.json
 
 
 
+.tmp/
 dist/
 releases/
+dist.pem

@@ -1,0 +1,37 @@
+{
+  "name": "webbooost",
+  "version": "4.0.0",
+  "description": "![Logo](http://mrmig-statis-assets.s3-website-eu-west-1.amazonaws.com/medium_tile.png)",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.4",
+    "coffeeify": "^0.7.0",
+    "node-fetch": "^1.3.3"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "typescript": "^2.5.2"
+  },
+  "scripts": {
+    "test": "tsc && ava",
+    "tdd": "tsc --watch & ava --watch",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr-mig/webbooost.git"
+  },
+  "author": "mr-mig",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mr-mig/webbooost/issues"
+  },
+  "homepage": "https://github.com/mr-mig/webbooost#readme",
+  "ava": {
+    "files": [
+      ".tmp/**/*.test.js"
+    ]
+  }
+}

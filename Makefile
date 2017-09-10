@@ -1,13 +1,14 @@
 distdir = ./dist
-TEST_RUNNER_BIN = ./node_modules/mocha/bin/mocha
+compiled = ./.tmp
 
-all: clean md copy compile
+all: clean md compile copy
 
 compile:
-	browserify -t coffeeify --extension=".coffee" ./src/bg/bg > $(distdir)/bg.js
-	browserify -t coffeeify --extension=".coffee" ./src/browser-action/popup > $(distdir)/popup.js
+	npm build
 
 copy:
+	cp $(compiled)/bg/bg.js $(distdir)/bg.js
+	cp $(compiled)/browser-action/popup.js $(distdir)/popup.js
 	cp ./src/browser-action/*.html $(distdir)
 	cp -r ./injectees $(distdir)
 	cp -r ./icons $(distdir)
@@ -33,7 +34,8 @@ major:
 	./.utils/bump major ./
 
 test:
-	@${TEST_RUNNER_BIN} --compilers coffee:coffee-script/register tests/*.coffee
+	npm test
 
 tdd:
-	@${TEST_RUNNER_BIN} -w --compilers coffee:coffee-script/register tests/*.coffee
+	npm run tdd
+
