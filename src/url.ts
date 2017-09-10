@@ -7,7 +7,8 @@ export type ParsedURL = {
   uri: string,
   isExtension: boolean,
   host: string,
-  library: string
+  library: string,
+  boostedBy?: 'hash' | 'msvp' | 'reg'
 }
 
 const last = (arr: string[]) => arr[arr.length - 1]
