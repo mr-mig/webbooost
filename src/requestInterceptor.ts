@@ -14,7 +14,7 @@ export const redirect = (url: URL, tabId: number, parsedURL: ParsedURL): Blockin
 
 // used for msvp blocking
 // no resource will be loaded
-export const block = (url: URL, tabId: number, parsedURL: ParsedURL): BlockingResponse => {
+export const block = (tabId: number, parsedURL: ParsedURL): BlockingResponse => {
   logAction(tabId, parsedURL)
   return { cancel: true }
 }

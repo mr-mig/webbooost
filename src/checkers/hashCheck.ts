@@ -1,10 +1,6 @@
-import { InjecteesFilepath, ParsedURL, URL } from '../domain'
+import { ParsedURL, ResourceMap } from '../domain'
 import { ALLOW_REQUEST_TOKEN } from "../requestInterceptor"
 import { redirect } from '../requestInterceptor'
-
-type ResourceMap = {
-  [resourceCDNURI in URL]: InjecteesFilepath
-}
 
 // todo generate proper filter
 const resourceMap: ResourceMap = {
@@ -22,7 +18,7 @@ export const check = (parsedURL: ParsedURL, tabId: number) => {
     parsedURL.boostedBy = 'hash'
 
     return redirect(
-      resourceMap[parsedURL.uri],
+      resourceMap[parsedURL.uri] as string,
       tabId,
       parsedURL
     )
