@@ -1,7 +1,7 @@
 {
   "semver": "\\s*[v=]*\\s*([0-9]+\\.[0-9]+\\.[0-9]+(-[0-9]+-?)?([a-zA-Z-+][a-zA-Z0-9-.:]*)?)",
   "wordpress-specific jquery": {
-    "patter": "jquery.js\\?ver=XXX",
+    "pattern": "jquery.js\\?ver=XXX",
     "versions": [
       "2.2.2",
       "2.2.1",
@@ -47,22 +47,22 @@
     "file": "jquery/$version$/jquery.min.js"
   },
   "wordpress-specific jquery-migrate": {
-    "patter": "jquery-migrate.min.js\\?ver=XXX",
+    "pattern": "jquery-migrate.min.js\\?ver=XXX",
     "versions": [
       "1.2.1"
     ],
     "file": "jquery-migrate/$version$/jquery-migrate.min.js"
   },
   "jquery-migrate w/o version": {
-    "patter": "jquery-migrate.min.js",
+    "pattern": "jquery-migrate.min.js",
     "file": "jquery-migrate/1.2.1/jquery-migrate.min.js"
   },
   "jquery-migrate w version": {
-    "patter": "jquery-migrate-XXX.min.js",
+    "pattern": "jquery-migrate-XXX.min.js",
     "file": "jquery-migrate/1.2.1/jquery-migrate.min.js"
   },
   "jquery": {
-    "patter": "jquery-XXX.min.js$",
+    "pattern": "jquery-XXX.min.js$",
     "versions": [
       "2.2.2",
       "2.2.1",

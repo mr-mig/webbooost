@@ -1,6 +1,6 @@
 import { URL_QUERY_TAG } from './checkers/configSyntax'
 
-export type URL = string
+export type strURL = string
 
 export type ParsedURL = {
   schema: string,
@@ -13,7 +13,7 @@ export type ParsedURL = {
 
 const last = (arr: string[]) => arr[arr.length - 1]
 
-export const parseURL = (url: URL): ParsedURL => {
+export const parseURL = (url: strURL): ParsedURL => {
   const splitted = url.split('://')
   const [schema, path, ] = splitted
 

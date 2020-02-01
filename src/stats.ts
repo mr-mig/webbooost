@@ -1,6 +1,6 @@
 import { getUriFromTab, not } from './helpers'
 import { ParsedURL } from "./url"
-import Tab = chrome.tabs.Tab
+type Tab = chrome.tabs.Tab
 
 const STORAGE_KEY = 'stats'
 

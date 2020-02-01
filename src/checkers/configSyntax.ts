@@ -1,3 +1,3 @@
-export const VERSION_TAG: RegExp = /\$version\$/
-export const NAME_TAG: RegExp = /\$name\$/
-export const URL_QUERY_TAG: RegExp = /\?.+$/
+export const VERSION_TAG = /\$version\$/
+export const NAME_TAG = /\$name\$/
+export const URL_QUERY_TAG = /\?.+$/

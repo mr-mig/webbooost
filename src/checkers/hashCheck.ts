@@ -1,4 +1,4 @@
-import { ParsedURL, ResourceMap } from '../domain'
+import { ParsedURL, ResourceMap, RequestCheckFunction } from '../domain'
 import { ALLOW_REQUEST_TOKEN } from "../requestInterceptor"
 import { redirect } from '../requestInterceptor'
 
@@ -10,7 +10,7 @@ const resourceMap: ResourceMap = {
 const hasMappedResource = (uri: string) =>
   resourceMap[uri] !== undefined
 
-export const check = (parsedURL: ParsedURL, tabId: number) => {
+export const check: RequestCheckFunction = (parsedURL: ParsedURL, tabId: number) => {
   if (parsedURL.isExtension) return
 
   // url totally match the library + version + cdn address

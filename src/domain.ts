@@ -1,5 +1,6 @@
-import { URL } from './url'
-export { URL, ParsedURL } from './url'
+import { strURL, ParsedURL } from './url'
+export { strURL, ParsedURL } from './url'
+
 export type InjecteesFilepath = string
 
 // string pattern for URLs with substitutions
@@ -29,7 +30,7 @@ export type ResourceDescriptor = {
 }
 
 export type ResourceMap = {
-  [resourceCDNURI in URL]: InjecteesFilepath | boolean
+  [resourceCDNURI in strURL]: InjecteesFilepath | boolean
 }
 
 export type RegExpMap = {
@@ -39,3 +40,5 @@ export type RegExpMap = {
 type HashConfig = {
   [resourceName in string]: ResourceDescriptor
 }
+
+export type RequestCheckFunction = (parsedURL: ParsedURL, tabId: number) => chrome.webRequest.BlockingResponse

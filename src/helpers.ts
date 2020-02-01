@@ -1,5 +1,5 @@
 import { parseURL } from './url'
-import Tab = chrome.tabs.Tab
+type Tab = chrome.tabs.Tab
 
 export const js = (filename: string): string =>
   chrome.extension.getURL(['/injectees/', filename].join(''))

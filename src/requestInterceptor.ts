@@ -1,13 +1,13 @@
 import { js } from './helpers'
-import { ParsedURL, URL } from './url'
+import { ParsedURL, strURL } from './url'
 import { addBoost } from './stats'
-import BlockingResponse = chrome.webRequest.BlockingResponse
+type BlockingResponse = chrome.webRequest.BlockingResponse
 
 const logAction = (tabId: number, parsedURL: ParsedURL) =>
   addBoost(tabId, parsedURL)
 
 // redirect page resource to webboost resource
-export const redirect = (url: URL, tabId: number, parsedURL: ParsedURL): BlockingResponse => {
+export const redirect = (url: strURL, tabId: number, parsedURL: ParsedURL): BlockingResponse => {
   logAction(tabId, parsedURL)
   return { redirectUrl: js(url) }
 }
