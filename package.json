@@ -6,19 +6,34 @@
     "test": "tests"
   },
   "dependencies": {
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
     "adm-zip": "^0.4.4",
-    "coffeeify": "^0.7.0",
-    "node-fetch": "^1.3.3"
+    "node-fetch": "^1.3.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
     "@types/chrome": "0.0.48",
-    "ava": "^0.22.0",
-    "typescript": "^2.5.2"
+    "@types/node": "^13.7.0",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0",
+    "typescript": "^3.7.5",
+    "yarn": "1.21.1"
   },
   "scripts": {
-    "test": "tsc && ava",
-    "tdd": "tsc --watch & ava --watch",
-    "build": "tsc"
+    "tc": "tsc --noEmit",
+    "tcw": "npm run tc -- --watch",
+    "test": "jest",
+    "tdd": "jest --watch",
+    "build": "npm run tc && npm run build:js",
+    "build:js": "babel src --out-dir .tmp --extensions '.ts,.tsx' --source-maps inline"
   },
   "repository": {
     "type": "git",
@@ -29,10 +44,5 @@
   "bugs": {
     "url": "https://github.com/mr-mig/webbooost/issues"
   },
-  "homepage": "https://github.com/mr-mig/webbooost#readme",
-  "ava": {
-    "files": [
-      ".tmp/**/*.test.js"
-    ]
-  }
+  "homepage": "https://github.com/mr-mig/webbooost#readme"
 }

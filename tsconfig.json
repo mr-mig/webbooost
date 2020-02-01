@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
+    "declaration": false,
     "module": "commonjs",
     "target": "es2015",
     "noImplicitAny": true,
-    "outDir": ".tmp"
+    "outDir": ".tmp",
+    "jsx": "react"
   },
   "exclude": [
     "node_modules"
-  ],
-  "types": [
-    "chrome"
   ]
 }
