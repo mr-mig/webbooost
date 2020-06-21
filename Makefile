@@ -23,13 +23,13 @@ pack: all
 	cd $(distdir) && zip -9 -r ../releases/webboost-$(shell cat $(distdir)/manifest.json | node -pe "JSON.parse(require('fs').readFileSync('/dev/stdin').toString()).version").zip * -x *.DS_Store*
 
 patch:
-	./.utils/bump patch ./
+	./.utils/bump.ts patch ./
 
 minor:
-	./.utils/bump minor ./
+	./.utils/bump.ts minor ./
 
 major:
-	./.utils/bump major ./
+	./.utils/bump.ts major ./
 
 test:
 	npm test
