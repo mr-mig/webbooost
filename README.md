@@ -65,8 +65,11 @@ If you want to modify **the code or injection rules** - make a pull request.
 
 How can I build all the stuff?
 ======
+
+You will need to install `ts-node` **globally** to be able to run scripts.
+
 Run `make all` to create a development build in `/dist`.
 
 You can point Chrome to this directory to use the "unpacked extension"
 
-To pack the extension in a zip use `make all pack` 
+To pack the extension in a zip use `make all pack`

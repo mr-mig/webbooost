@@ -18,6 +18,7 @@
     "@types/node": "^13.7.0",
     "babel-jest": "^25.1.0",
     "jest": "^25.1.0",
+    "ts-node-dev": "^1.0.0-pre.49",
     "typescript": "^3.7.5",
     "yarn": "1.21.1"
   },
