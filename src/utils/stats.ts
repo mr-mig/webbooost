@@ -1,5 +1,5 @@
-import { getUriFromTab, not } from './helpers'
-import { ParsedURL } from "./url"
+import { getUriFromTab, not } from './helpers.js'
+import { ParsedURL } from "./url.js"
 type Tab = chrome.tabs.Tab
 
 const STORAGE_KEY = 'stats'

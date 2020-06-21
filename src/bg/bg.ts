@@ -1,11 +1,11 @@
-import * as stats from '../stats'
+import * as stats from '../utils/stats'
 
-import { check as hashCheck } from '../checkers/hashCheck'
-import { check as regCheck } from '../checkers/regCheck'
-import { check as msvpCheck } from '../checkers/msvpCheck'
-import * as interceptor from '../requestInterceptor'
-import { parseURL } from '../url'
-import { load } from '../state'
+import { check as hashCheck } from '../checkers/hashCheck.js'
+import { check as regCheck } from '../checkers/regCheck.js'
+import { check as msvpCheck } from '../checkers/msvpCheck.js'
+import * as interceptor from '../utils/requestInterceptor.js'
+import { parseURL } from '../utils/url.js'
+import { load } from '../utils/state.js'
 
 const checkers = [hashCheck, regCheck, msvpCheck]
 
@@ -30,21 +30,22 @@ chrome.tabs.onUpdated.addListener((tabId: number, change: chrome.tabs.TabChangeI
   // tab object is IMMUTABLE, surprise surprise!
   // So, we need to add new listeners for a tab with a new URL...
   if (change.status === 'loading' && (change.url || tabListeners[tabId] === undefined)) {
-    const requestListener = tabListeners[tabId]
+    let requestListener = tabListeners[tabId]
 
     if (requestListener !== undefined) {
       chrome.webRequest.onBeforeRequest.removeListener(requestListener)
     }
 
-    tabListeners[tabId] = makeRequestListener(tab);
+    requestListener = tabListeners[tabId] = makeRequestListener(tab);
 
     chrome.webRequest.onBeforeRequest.addListener(
       requestListener,
       {
         tabId: tab.id,
-        urls: ['http://*/*', 'https://*/*', 'chrome-extension://*/*']
+        urls: ['http://*/*', 'https://*/*', 'chrome-extension://*/*'],
+        types: ['script','stylesheet', 'font']
       },
-      ["blocking"]
+      ['blocking']
     )
   }
 })

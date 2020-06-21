@@ -14,12 +14,6 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.3",
-    "@babel/core": "^7.8.3",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@babel/preset-react": "^7.8.3",
-    "@babel/preset-typescript": "^7.8.3",
     "@types/chrome": "0.0.48",
     "@types/node": "^13.7.0",
     "babel-jest": "^25.1.0",
@@ -28,12 +22,11 @@
     "yarn": "1.21.1"
   },
   "scripts": {
-    "tc": "tsc --noEmit",
+    "tc": "tsc",
     "tcw": "npm run tc -- --watch",
     "test": "jest",
     "tdd": "jest --watch",
-    "build": "npm run tc && npm run build:js",
-    "build:js": "babel src --out-dir .tmp --extensions '.ts,.tsx' --source-maps inline"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

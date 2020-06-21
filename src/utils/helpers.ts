@@ -1,4 +1,4 @@
-import { parseURL } from './url'
+import { parseURL } from './url.js'
 type Tab = chrome.tabs.Tab
 
 export const js = (filename: string): string =>

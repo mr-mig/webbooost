@@ -1,9 +1,9 @@
-import { ParsedURL, RegExpMap } from '../domain'
-import { redirect, ALLOW_REQUEST_TOKEN } from '../requestInterceptor'
+import { ParsedURL, RegExpMap } from '../utils/domain.js'
+import { redirect, ALLOW_REQUEST_TOKEN } from '../utils/requestInterceptor.js'
 
 // todo import real filters
 const regexpMap = {
-  'pattern$': 'filepath'
+  'jquery.js\\?ver=.*$': 'jquery/1.11.0/jquery.min.js'
 } as RegExpMap
 
 let regexps: RegExp[] = []
@@ -16,13 +16,14 @@ Object.keys(regexpMap).forEach( key => {
 })
 
 export const check = (parsedURL: ParsedURL, tabId: number) => {
-  if (parsedURL.isExtension) return
+  if (parsedURL.isExtension) return ALLOW_REQUEST_TOKEN
 
-  const uri = parsedURL.uri
+  const path = parsedURL.path
   let substitution
 
   for (let i = 0; i < regexps.length; i++){
-    if (regexps[i].test(uri)){
+    console.log(regexps[i], path, regexps[i].test(path))
+    if (regexps[i].test(path)){
       substitution = substitutions[i]
       break
     }

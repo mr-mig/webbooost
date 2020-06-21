@@ -1,24 +1,22 @@
+source = ./src
 distdir = ./dist
-compiled = ./.tmp
 
-all: clean md compile copy
+all: clean md copy compile
 
 compile:
-	npm build
+	npm run build
 
 copy:
-	cp $(compiled)/bg/bg.js $(distdir)/bg.js
-	cp $(compiled)/browser-action/popup.js $(distdir)/popup.js
-	cp ./src/browser-action/*.html $(distdir)
-	cp -r ./injectees $(distdir)
+	cp -r ./injectees $(distdir)/injectees
 	cp -r ./icons $(distdir)
 	cp ./manifest.json $(distdir)
+	cp $(source)/bg.html $(distdir)
+	cp $(source)/popup.html $(distdir)
 
 md:
 	mkdir -p dist/injectees $(distdir)/icons
 
 clean:
-
 	rm -rf $(distdir)/*
 
 pack: all

@@ -1,6 +1,6 @@
-import { js } from './helpers'
-import { ParsedURL, strURL } from './url'
-import { addBoost } from './stats'
+import { js } from './helpers.js'
+import { ParsedURL, strURL } from './url.js'
+import { addBoost } from './stats.js'
 type BlockingResponse = chrome.webRequest.BlockingResponse
 
 const logAction = (tabId: number, parsedURL: ParsedURL) =>
@@ -19,4 +19,4 @@ export const block = (tabId: number, parsedURL: ParsedURL): BlockingResponse => 
   return { cancel: true }
 }
 
-export const ALLOW_REQUEST_TOKEN = { cancel: true } as BlockingResponse
+export const ALLOW_REQUEST_TOKEN = { cancel: false } as BlockingResponse

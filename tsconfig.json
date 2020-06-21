@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
     "declaration": false,
-    "module": "commonjs",
-    "target": "es2015",
+    "module": "ES2015",
+    "moduleResolution": "Node",
+    "target": "ES6",
     "noImplicitAny": true,
-    "outDir": ".tmp",
+    "outDir": "dist",
     "jsx": "react"
   },
   "exclude": [

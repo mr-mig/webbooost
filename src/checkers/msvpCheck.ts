@@ -1,5 +1,5 @@
-import { ParsedURL, ResourceMap } from '../domain'
-import { block, ALLOW_REQUEST_TOKEN} from '../requestInterceptor'
+import { ParsedURL, ResourceMap } from '../utils/domain.js'
+import { block, ALLOW_REQUEST_TOKEN} from '../utils/requestInterceptor.js'
 
 // todo import real filters
 const blockList = {
@@ -10,7 +10,7 @@ const isInBlocklist = (host: string) =>
   blockList[host]
 
 export const check = (parsedURL: ParsedURL, tabId: number) => {
-  if (parsedURL.isExtension) return
+  if (parsedURL.isExtension) return ALLOW_REQUEST_TOKEN
 
   //host totally matches the MSVP entry
   if (isInBlocklist(parsedURL.host)){

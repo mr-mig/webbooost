@@ -1,5 +1,5 @@
-import { strURL, ParsedURL } from './url'
-export { strURL, ParsedURL } from './url'
+import { strURL, ParsedURL } from './url.js'
+export { strURL, ParsedURL } from './url.js'
 
 export type InjecteesFilepath = string
 

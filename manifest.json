@@ -1,7 +1,7 @@
 {
   "name": "Web Boost - Wait Less, Browse Faster!",
   "short_name": "Webbooost",
-  "version": "3.2.4",
+  "version": "0.0.0",
   "manifest_version": 2,
   "description": "Make your web pages load faster! Boost browser speed!",
   "homepage_url": "http://www.fse.guru",
@@ -11,9 +11,7 @@
     "128": "icons/icon128.png"
   },
   "background": {
-    "scripts": [
-      "bg.js"
-    ],
+    "page": "bg.html",
     "persistent": true
   },
   "browser_action": {
@@ -32,6 +30,10 @@
   ],
   "content_scripts": [],
   "web_accessible_resources": [
-    "injectees/*"
+    "injectees/*",
+    "checkers/*",
+    "configs/*",
+    "utils/*",
+    "browser-action/*"
   ]
 }

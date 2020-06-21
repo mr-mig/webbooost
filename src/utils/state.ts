@@ -1,4 +1,4 @@
-import { getUriFromTab } from './helpers'
+import { getUriFromTab } from './helpers.js'
 type Tab = chrome.tabs.Tab
 type PageConfig = {
     id: string
