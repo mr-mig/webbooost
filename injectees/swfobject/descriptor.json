@@ -1,0 +1,7 @@
+{
+  "urls": [
+    "cdnjs.cloudflare.com/ajax/libs/swfobject/$version$/swfobject.js",
+    "ajax.googleapis.com/ajax/libs/swfobject/$version$/swfobject.js",
+    "yandex.st/swfobject/$version$/swfobject.min.js"
+  ]
+}

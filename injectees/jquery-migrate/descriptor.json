@@ -1,0 +1,8 @@
+{
+  "urls": ["code.jquery.com/jquery-migrate-$version$.min.js"],
+  "regs": [
+    "jquery-migrate-$version$.min.js$", 
+    "jquery-migrate.min.js$", 
+    "jquery-migrate.min.js\\?ver=$version$$"
+  ]
+}

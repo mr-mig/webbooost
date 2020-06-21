@@ -1,0 +1,15 @@
+{
+  "urls": [
+    "ajax.googleapis.com/ajax/libs/jquery/$version$/jquery.min.js",
+    "yandex.st/jquery/$version$/jquery.min.js",
+    "cdn.jsdelivr.net/jquery/$version$/jquery.min.js",
+    "ajax.aspnetcdn.com/ajax/jQuery/jquery-$version$.min.js",
+    "cdnjs.cloudflare.com/ajax/libs/jquery/$version$/jquery.min.js",
+    "code.jquery.com/jquery-$version$.min.js",
+    "oss.maxcdn.com/jquery/$version$/jquery.min.js"
+  ],
+  "regs": [
+    "jquery-$version$.min.js$",
+    "jquery.js\\?ver=$version$$"
+  ]
+}

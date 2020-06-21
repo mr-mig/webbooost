@@ -1,0 +1,8 @@
+{
+  "urls": [
+    "netdna.bootstrapcdn.com/twitter-bootstrap/$version$/$filetype$/$filename$",
+    "netdna.bootstrapcdn.com/bootstrap/$version$/$filetype$/$filename$",
+    "maxcdn.bootstrapcdn.com/twitter-bootstrap/$version$/$filetype$/$filename$",
+    "maxcdn.bootstrapcdn.com/bootstrap/$version$/$filetype$/$filename$"
+  ]
+}
