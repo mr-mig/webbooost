@@ -1,4 +1,4 @@
-import { URL_QUERY_TAG } from '../checkers/configSyntax.js'
+const URL_QUERY_TAG = /\?.+$/
 
 export type strURL = string
 
@@ -9,7 +9,7 @@ export type ParsedURL = {
   isExtension: boolean,
   host: string,
   library: string,
-  boostedBy?: 'hash' | 'msvp' | 'reg'
+  boostedBy?: 'full' | 'msvp' | 'parts'
 }
 
 const last = (arr: string[]) => arr[arr.length - 1]

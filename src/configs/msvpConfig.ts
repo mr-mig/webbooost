@@ -1,4 +1,4 @@
-[
+export default [
   "lb.usemaxserver.de",
   "tracking.klickthru.com",
   "gsmtop.net",

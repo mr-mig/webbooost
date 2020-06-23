@@ -8,8 +8,8 @@
     "code.jquery.com/jquery-$version$.min.js",
     "oss.maxcdn.com/jquery/$version$/jquery.min.js"
   ],
-  "regs": [
-    "jquery-$version$.min.js$",
-    "jquery.js\\?ver=$version$$"
+  "parts": [
+    "jquery-$version$.min.js",
+    "jquery.js?ver=$version$"
   ]
 }

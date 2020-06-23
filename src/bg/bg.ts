@@ -1,7 +1,7 @@
 import * as stats from '../utils/stats'
 
-import { check as hashCheck } from '../checkers/hashCheck.js'
-import { check as regCheck } from '../checkers/regCheck.js'
+import { check as hashCheck } from '../checkers/fullPathCheck.js'
+import { check as regCheck } from '../checkers/partsCheck.js'
 import { check as msvpCheck } from '../checkers/msvpCheck.js'
 import * as interceptor from '../utils/requestInterceptor.js'
 import { parseURL } from '../utils/url.js'

@@ -1,13 +1,16 @@
 source = ./src
 distdir = ./dist
 
-all: clean md copy compile
+all: clean md generate copy compile
 
 compile:
 	npm run build
 
+generate:
+	./.utils/generate.ts
+
 copy:
-	cp -r ./injectees $(distdir)/injectees
+	cp -r ./injectees $(distdir)
 	cp -r ./icons $(distdir)
 	cp ./manifest.json $(distdir)
 	cp $(source)/bg.html $(distdir)

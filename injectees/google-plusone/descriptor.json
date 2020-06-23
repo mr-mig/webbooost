@@ -1,0 +1,4 @@
+{ 
+  "urls": ["apis.google.com/js/$filepath$"],
+  "filepath": ["plusone.js"]
+}

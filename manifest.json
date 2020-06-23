@@ -30,10 +30,6 @@
   ],
   "content_scripts": [],
   "web_accessible_resources": [
-    "injectees/*",
-    "checkers/*",
-    "configs/*",
-    "utils/*",
-    "browser-action/*"
+    "injectees/*"
   ]
 }
